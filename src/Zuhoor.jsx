@@ -6,7 +6,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 const CATALOG = [
   {
     id:"men", label:"Men",
-    img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&fit=crop&q=85",
+    img:"https://images.unsplash.com/photo-1667839410402-c4266dc7f1d0?q=80&w=764&auto=format&fit=crop",
     subs:[
       { id:"thobe", label:"Thobe",
         img:"https://images.unsplash.com/photo-1614438283000-4ad1b9b5c985?w=700&fit=crop&q=85",
@@ -24,7 +24,7 @@ const CATALOG = [
   },
   {
     id:"women", label:"Women",
-    img:"https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=900&fit=crop&q=85",
+    img:"https://images.unsplash.com/photo-1739829417987-28d43f9a6b49?w=600&auto=format&fit=crop&q=60",
     subs:[
       { id:"abaya", label:"Abaya",
         img:"https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=700&fit=crop&q=85",
@@ -36,7 +36,7 @@ const CATALOG = [
   },
   {
     id:"kids", label:"Kids",
-    img:"https://images.unsplash.com/photo-1503944168849-8bf86875bbd8?w=900&fit=crop&q=85",
+    img:"https://www.hadiyahgifting.com/cdn/shop/files/MehendiGreenRomper_Bisht.webp?v=1773397496&width=2000",
     subs:[
       { id:"kids-jubba", label:"Jubba",
         img:"https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=700&fit=crop&q=85",
@@ -55,9 +55,9 @@ const INIT_PRODUCTS = [
   { id:1, name:"Premium White Full Sleeve Thobe", cat:"men", sub:"thobe", subsub:"full-sleeve",
     price:2400, originalPrice:3000, discount:20, stock:45,
     colors:[
-      {name:"White",hex:"#f5f5f0",img:"https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=700&fit=crop&q=85"},
-      {name:"Cream",hex:"#f0e8d0",img:"https://images.unsplash.com/photo-1603251579431-8041402bdeda?w=700&fit=crop&q=85"},
-      {name:"Light Blue",hex:"#c8dff0",img:"https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=700&fit=crop&q=85"},
+      {name:"White",hex:"#f5f5f0",img:"https://www.vitabaya.com/cdn/shop/files/A80I1074_b0e0243d-aff5-4f5d-9aba-4f12aa2fe05b.jpg?v=1756868145"},
+      {name:"Cream",hex:"#f0e8d0",img:"https://images.unsplash.com/photo-1667839419946-f6c6c2bdf332?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+      {name:"Light Blue",hex:"#c8dff0",img:"https://images.unsplash.com/photo-1667839410402-c4266dc7f1d0?q=80&w=764&auto=format&fit=crop"},
     ],
     sizes:["S","M","L","XL","XXL"],
     desc:"Crafted from premium 100% Egyptian cotton, this full sleeve thobe combines traditional Arabian design with modern comfort. Perfect for daily prayers, Jumu'ah, and formal occasions.",
@@ -66,8 +66,8 @@ const INIT_PRODUCTS = [
   { id:2, name:"Classic Half Sleeve Thobe", cat:"men", sub:"thobe", subsub:"half-sleeve",
     price:2100, originalPrice:2600, discount:19, stock:38,
     colors:[
-      {name:"White",hex:"#f5f5f0",img:"https://images.unsplash.com/photo-1626304895578-2c59bd2c0f7e?w=700&fit=crop&q=85"},
-      {name:"Beige",hex:"#e0c88a",img:"https://images.unsplash.com/photo-1614253429340-98120bd6d753?w=700&fit=crop&q=85"},
+      {name:"White",hex:"#f5f5f0",img:"https://res.cloudinary.com/dlkfhk1nx/image/upload/q_auto/f_auto/v1779517408/haf-sleeve-white-throbe_ch4zo7.jpg"},
+      {name:"Beige",hex:"#e0c88a",img:"https://i0.wp.com/www.mens-thobes.com/wp-content/uploads/2023/05/T2A0422-scaled.jpg?fit=400%2C600&ssl=1"},
     ],
     sizes:["M","L","XL","XXL"],
     desc:"Lightweight half sleeve thobe ideal for warm Bangladeshi weather. Breathable cotton blend keeps you comfortable throughout the day.",
@@ -76,8 +76,8 @@ const INIT_PRODUCTS = [
   { id:3, name:"Royal Arabian Thobe", cat:"men", sub:"thobe", subsub:"arabian",
     price:3200, originalPrice:null, discount:0, stock:20,
     colors:[
-      {name:"White",hex:"#f5f5f0",img:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=700&fit=crop&q=85"},
-      {name:"Navy",hex:"#1a2a4a",img:"https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=700&fit=crop&q=85"},
+      {name:"White",hex:"#f5f5f0",img:"https://i.etsystatic.com/35486431/r/il/95f260/7737532803/il_fullxfull.7737532803_ey65.jpg"},
+      {name:"Navy",hex:"#1a2a4a",img:"https://www.nabia.in/cdn/shop/files/2_2439aa65-ce60-4b0b-9f75-d5a4254b514d.jpg?v=1699523977"},
     ],
     sizes:["M","L","XL","XXL"],
     desc:"Authentic Arabian thobe with gold collar embroidery. A mark of distinguished style for weddings and Eid celebrations.",
@@ -86,8 +86,8 @@ const INIT_PRODUCTS = [
   { id:4, name:"Classic Saudi Thobe", cat:"men", sub:"thobe", subsub:"saudi",
     price:2800, originalPrice:3400, discount:18, stock:35,
     colors:[
-      {name:"White",hex:"#f5f5f0",img:"https://images.unsplash.com/photo-1614438283000-4ad1b9b5c985?w=700&fit=crop&q=85"},
-      {name:"Grey",hex:"#b0b0b0",img:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=700&fit=crop&q=85"},
+      {name:"White",hex:"#f5f5f0",img:"https://pub-ce7da8061d0f411ba010b84ef5f6beb8.r2.dev/1750512163500-1.webp"},
+      {name:"Grey",hex:"#b0b0b0",img:"https://res.cloudinary.com/dlkfhk1nx/image/upload/q_auto/f_auto/v1779519801/Grey-Saudi-Throbe_tf7evy.webp"},
     ],
     sizes:["M","L","XL","XXL"],
     desc:"Traditional Saudi-cut thobe with precision tailoring. Features a crisp collar, clean lines and premium fabric blend.",
@@ -96,9 +96,9 @@ const INIT_PRODUCTS = [
   { id:5, name:"Classic Cotton Punjabi", cat:"men", sub:"punjabi", subsub:"classic-punjabi",
     price:1800, originalPrice:null, discount:0, stock:60,
     colors:[
-      {name:"White",hex:"#f5f5f0",img:"https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=700&fit=crop&q=85"},
-      {name:"Sky Blue",hex:"#a0c8e8",img:"https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=700&fit=crop&q=85"},
-      {name:"Sage",hex:"#8aab80",img:"https://images.unsplash.com/photo-1562157873-818bc0726f68?w=700&fit=crop&q=85"},
+      {name:"White",hex:"#f5f5f0",img:"https://cdn.othoba.com/images/thumbs/1863883_classic-white-cotton-panjabi.webp"},
+      {name:"Sky Blue",hex:"#a0c8e8",img:"https://fashionhq.com.bd/wp-content/uploads/2023/03/p-7.jpeg"},
+      {name:"Sage",hex:"#8aab80",img:"https://cdn.kaykraft.com/wp-content/uploads/2025/03/PNJ-CT-LG-1390-2.jpg"},
     ],
     sizes:["S","M","L","XL","XXL"],
     desc:"Traditional cotton punjabi with subtle embroidery at the neckline. Suitable for daily wear, Eid celebrations and religious gatherings.",
@@ -107,8 +107,8 @@ const INIT_PRODUCTS = [
   { id:6, name:"Premium Silk Punjabi", cat:"men", sub:"punjabi", subsub:"silk-punjabi",
     price:3200, originalPrice:3800, discount:16, stock:18,
     colors:[
-      {name:"Ivory",hex:"#f0e8d0",img:"https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?w=700&fit=crop&q=85"},
-      {name:"Gold",hex:"#c8a040",img:"https://images.unsplash.com/photo-1594938298603-c8148c4b4c4a?w=700&fit=crop&q=85"},
+      {name:"Ivory",hex:"#f0e8d0",img:"https://twelvebd.com/cdn/shop/files/SB-PANK-TM24-04F-56261_3.jpg?v=1756710487&width=533"},
+      {name:"Gold",hex:"#c8a040",img:"https://twelvebd.com/cdn/shop/files/PH-PANE-TM25-04EF-76810_5.jpg?v=1756707490"},
     ],
     sizes:["M","L","XL","XXL"],
     desc:"Luxurious silk-blend punjabi adorned with gold zari embroidery. The definitive choice for weddings and celebrations.",
@@ -117,8 +117,8 @@ const INIT_PRODUCTS = [
   { id:7, name:"Elegant Black Abaya", cat:"women", sub:"abaya", subsub:"casual-abaya",
     price:3200, originalPrice:null, discount:0, stock:40,
     colors:[
-      {name:"Black",hex:"#111111",img:"https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=700&fit=crop&q=85"},
-      {name:"Charcoal",hex:"#3a3a3a",img:"https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=700&fit=crop&q=85"},
+      {name:"Black",hex:"#111111",img:"https://tabeens.com/cdn/shop/files/Elegant_Black_Abaya_with_Golden_Embroidery_1.jpg?v=1729795445"},
+      {name:"Charcoal",hex:"#3a3a3a",img:"https://veilandco.ca/cdn/shop/files/7_51a29811-2cac-4c9a-aefb-504495b12749.png?v=1756222979"},
     ],
     sizes:["S","M","L","XL","XXL"],
     desc:"Flowing black abaya in premium crepe fabric. A timeless silhouette for the modern modest woman.",
@@ -127,8 +127,8 @@ const INIT_PRODUCTS = [
   { id:8, name:"Designer Party Abaya", cat:"women", sub:"abaya", subsub:"party-abaya",
     price:4500, originalPrice:5500, discount:18, stock:15,
     colors:[
-      {name:"Black",hex:"#111111",img:"https://images.unsplash.com/photo-1611601322175-ef8ec8c5e208?w=700&fit=crop&q=85"},
-      {name:"Deep Blue",hex:"#182060",img:"https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=700&fit=crop&q=85"},
+      {name:"Black",hex:"#111111",img:"https://www.palestinianelegance.com/cdn/shop/files/Elegant_woman_in_black_abaya_2.png"},
+      {name:"Deep Blue",hex:"#182060",img:"https://jamilamodesty.com/cdn/shop/products/IMG-20230110-WA0108.jpg?v=1676653810"},
     ],
     sizes:["S","M","L","XL"],
     desc:"Intricately embroidered party abaya with delicate lace trim and pearl detailing for special events.",
@@ -137,8 +137,8 @@ const INIT_PRODUCTS = [
   { id:9, name:"Boys White Jubba", cat:"kids", sub:"kids-jubba", subsub:"boys-jubba",
     price:1500, originalPrice:1800, discount:17, stock:60,
     colors:[
-      {name:"White",hex:"#f5f5f0",img:"https://images.unsplash.com/photo-1503944168849-8bf86875bbd8?w=700&fit=crop&q=85"},
-      {name:"Cream",hex:"#f0e8d0",img:"https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=700&fit=crop&q=85"},
+      {name:"White",hex:"#f5f5f0",img:"https://www.nabia.in/cdn/shop/files/3-2.jpg?v=1731222053"},
+      {name:"Cream",hex:"#f0e8d0",img:"https://www.junaidjamshed.com/cdn/shop/files/jc-jubba-33667_3.jpg?v=1777064006&width=436"},
     ],
     sizes:["2-3Y","4-5Y","6-7Y","8-9Y","10-11Y"],
     desc:"Soft premium cotton jubba for boys. Comfortable for madrasa every day, special enough for Eid.",
@@ -147,8 +147,8 @@ const INIT_PRODUCTS = [
   { id:10, name:"Kids Eid Punjabi Set", cat:"kids", sub:"kids-punjabi", subsub:"eid-punjabi",
     price:1200, originalPrice:1500, discount:20, stock:75,
     colors:[
-      {name:"White",hex:"#f5f5f0",img:"https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=700&fit=crop&q=85"},
-      {name:"Blue",hex:"#a0b8d8",img:"https://images.unsplash.com/photo-1503944168849-8bf86875bbd8?w=700&fit=crop&q=85"},
+      {name:"White",hex:"#f5f5f0",img:"https://mcprod.aarong.com/media/catalog/product/0/1/0190000058709.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width="},
+      {name:"Blue",hex:"#a0b8d8",img:"https://objectstorage.ap-singapore-1.oraclecloud.com/n/aximxvolvk6d/b/sailorbucket/o/uploads/all/KcN5rhHJ6J4SN0GaBkD6PMEdxxTK3EoFX43DXWpP.jpg"},
     ],
     sizes:["2-3Y","4-5Y","6-7Y","8-9Y","10-11Y"],
     desc:"Festive punjabi set for kids with vibrant embroidery. Makes every celebration a joyful memory.",
@@ -157,8 +157,8 @@ const INIT_PRODUCTS = [
   { id:11, name:"Embroidered Navy Punjabi", cat:"men", sub:"punjabi", subsub:"embroidered-punjabi",
     price:2400, originalPrice:2900, discount:17, stock:25,
     colors:[
-      {name:"Navy",hex:"#1a2a4a",img:"https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=700&fit=crop&q=85"},
-      {name:"Maroon",hex:"#6b1c22",img:"https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=700&fit=crop&q=85"},
+      {name:"Navy",hex:"#1a2a4a",img:"https://res.cloudinary.com/dlkfhk1nx/image/upload/q_auto/f_auto/v1779519494/naby-blue-embroidered-panjabi_zweth5.webp"},
+      {name:"Maroon",hex:"#6b1c22",img:"https://lyonorabd.com/cdn/shop/files/5rtwq.jpg?v=1758040066"},
     ],
     sizes:["M","L","XL","XXL"],
     desc:"Rich embroidered punjabi with collar and cuff detailing. Perfect for religious gatherings and formal events.",
@@ -167,8 +167,8 @@ const INIT_PRODUCTS = [
   { id:12, name:"Embroidered Casual Abaya", cat:"women", sub:"abaya", subsub:"embroidered-abaya",
     price:3800, originalPrice:4500, discount:16, stock:22,
     colors:[
-      {name:"Black",hex:"#111111",img:"https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=700&fit=crop&q=85"},
-      {name:"Olive",hex:"#5c6030",img:"https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=700&fit=crop&q=85"},
+      {name:"Black",hex:"#111111",img:"https://res.cloudinary.com/dlkfhk1nx/image/upload/q_auto/f_auto/v1779520161/black-casual-abaya_rw792z.webp"},
+      {name:"Olive",hex:"#5c6030",img:"https://mariam-col.com/cdn/shop/files/olive-branch-embroidered-linen-abaya-set-with-matching-belt-hijab-moa037-2799477.jpg?v=1758177148&width=1200"},
     ],
     sizes:["S","M","L","XL","XXL"],
     desc:"Subtle floral embroidery on premium fabric. Where comfort meets culture for the modern everyday woman.",
@@ -177,11 +177,11 @@ const INIT_PRODUCTS = [
 
 const INIT_BANNERS = [
   { id:1, title:"Eid Collection 2026", subtitle:"Authentic Thobes, Punjabis & Abayas — Crafted for Every Occasion", cta:"Shop Now", ctaLink:"men",
-    bg:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&h=900&fit=crop&q=85", active:true },
+    bg:"https://res.cloudinary.com/dlkfhk1nx/image/upload/q_auto/f_auto/v1779521037/eid-dress-banner_qhkv2h.jpg", active:true },
   { id:2, title:"Women's Modest Fashion", subtitle:"Elegant Abayas Curated for the Modern Modest Woman", cta:"Explore Women's", ctaLink:"women",
-    bg:"https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1800&h=900&fit=crop&q=85", active:true },
+    bg:"https://cdn.shopify.com/s/files/1/0569/2404/5469/files/Azure-Eid-Ensemble-24-Web_Banner.jpg?v=1734681697", active:true },
   { id:3, title:"New Kids Collection", subtitle:"Beautiful Jubbas & Punjabis for Your Little Ones", cta:"Shop Kids", ctaLink:"kids",
-    bg:"https://images.unsplash.com/photo-1503944168849-8bf86875bbd8?w=1800&h=900&fit=crop&q=85", active:true },
+    bg:"https://res.cloudinary.com/dlkfhk1nx/image/upload/q_auto/f_auto/v1779522062/eid-kids-collection_t79ljl.png", active:true },
 ];
 
 const INIT_COUPONS = [
